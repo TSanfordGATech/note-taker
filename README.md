@@ -9,7 +9,7 @@ Tori.danielle.clark91@gmail.com
 Heroku link: https://notetakergatech.herokuapp.com/
 Repo Link: https://github.com/TSanfordGATech/note-taker
 
-Screen shots of completed project: ![Final Screen shot](./assets/note.png)
+Screen shots of completed project: ![Final Screen shot](./Assets/note.png)
 
 ## Usage
 Must have the NPM express installed to run program. 
