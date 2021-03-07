@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make the static files. This bit was pulled from https://expressjs.com/en/starter/static-files.html
-app.use(express.static("./develop/public"));
+app.use(express.static("./Develop/public"));
 
 // Start bringing in the APIs. There will be a Get, Post, and delete. 
 
@@ -47,7 +47,7 @@ app.post("/api/notes", function (req, res) {
 // Delete (resource https://expressjs.com/en/5x/api.html)
 app.delete("/api/notes/:id", function (req, res) {
     const idToDelete = parseInt(req.params.id);
-    readFileAsync("./develop/db/db.json", "utf8").then(function (data) {
+    readFileAsync("./Develop/db/db.json", "utf8").then(function (data) {
         const notes = [].concat(JSON.parse(data));
         const newNotesData = []
         for (let i = 0; i < notes.length; i++) {
@@ -57,22 +57,22 @@ app.delete("/api/notes/:id", function (req, res) {
         }
         return newNotesData
     }).then(function (notes) {
-        writeFileAsync("./develop/db/db.json", JSON.stringify(notes))
+        writeFileAsync("./Develop/db/db.json", JSON.stringify(notes))
         res.send('saved success!!!');
     })
 })
 
 // HTML routing 
 app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "./develop/public/notes.html"));
+    res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
 
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "./develop/public/index.html"));
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./develop/public/index.html"));
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
 
