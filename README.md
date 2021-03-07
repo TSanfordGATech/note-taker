@@ -3,6 +3,16 @@ This assignment is to modify starter code to create an application called Note T
 
 The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
 
+## Contact 
+Tori Sanford
+Tori.danielle.clark91@gmail.com
+Heroku link: https://notetakergatech.herokuapp.com/
+Repo Link: https://github.com/TSanfordGATech/note-taker
+
+Screen shots of completed project: ![Final Screen shot](./assets/note.png)
+
+## Usage
+Must have the NPM express installed to run program. 
 
 ## User Story
 
